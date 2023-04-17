@@ -40,7 +40,7 @@ function App() {
       localStorage.setItem('codexTags', response.data.bot.trim());
     } catch (error) {
       console.error(error);
-      console.alert('There was an error fetching tags from Codex.');
+      alert('There was an error fetching from OpenAI.');
     }
   }
 
@@ -56,7 +56,7 @@ function App() {
       localStorage.setItem('codexLinks', response.data.bot.trim());
     } catch (error) {
       console.error(error);
-      console.alert('There was an error fetching links from Codex.');
+      alert('There was an error fetching from OpenAI.');
     }
   }
 
@@ -73,7 +73,7 @@ function App() {
       console.log('Finished fetching poems from Codex.');
     } catch (error) {
       console.error(error);
-      console.alert('There was an error fetching poems from Codex.');
+      alert('There was an error fetching from OpenAI.');
     }
   }
 

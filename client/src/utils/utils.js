@@ -17,4 +17,12 @@ function getTimestamp(date) {
   return ` - ${strTime}`;
 }
 
-export { generateUniqueId, getTimestamp, }
+const navbarData = [
+  { title: 'Home', url: '#', badge: '', active: false },
+  { title: 'Open Ai', url: 'https://openai.com', badge: 'new', active: true },
+  { title: 'Github', url: 'http://github.com/', badge: '', active: false },
+  { title: 'Vercel', url: 'http://vercel.com/', badge: '', active: false },
+  { title: 'Render', url: 'https://dashboard.render.com/', badge: '', active: false },
+];
+
+export { generateUniqueId, getTimestamp, navbarData }

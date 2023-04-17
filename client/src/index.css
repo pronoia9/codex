@@ -490,9 +490,8 @@ textarea {
 }
 
 .app-a .button--primary:hover {
-  background-color: var(--colors-primary-200) !important;
+  background-color: var(--colors-primary-200);
 }
-
 
 .button-toolbar {
   display: flex;
@@ -529,6 +528,8 @@ textarea {
 
 .channel-feed__body {
   flex-grow: 1;
+  /* height: initial !important; */
+  /* overflow: scroll; */
 }
 
 .channel-feed__footer {

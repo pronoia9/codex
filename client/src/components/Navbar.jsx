@@ -1,4 +1,17 @@
-import React from 'react';
+import { navbarData } from '../utils/utils';
+
+const NavbarItem = ({ title, url, badge, active }) => (
+  <li className='nav__item'>
+    <a className={`nav__link${active ? ' nav__link--active' : ''}`} href={url}>
+      <span className='nav__link__element'>{title}</span>
+      {badge && (
+        <span className='nav__link__element'>
+          <span className='badge'>{badge}</span>
+        </span>
+      )}
+    </a>
+  </li>
+);
 
 const Navbar = () => {
   return (
@@ -10,37 +23,10 @@ const Navbar = () => {
       {/* Navbar */}
       <nav>
         <ul className='nav'>
-          <li className='nav__item'>
-            <a className='nav__link' href='#'>
-              <span className='nav__link__element'>Home</span>
-            </a>
-          </li>
-          <li className='nav__item'>
-            <a className='nav__link nav__link--active' href='https://openai.com'>
-              <span className='nav__link__element'>Open AI</span>
-              <span className='nav__link__element'>
-                <span className='badge'>new</span>
-              </span>
-            </a>
-          </li>
-          <li className='nav__item'>
-            <a className='nav__link' href='http://github.com/' target='_blank'>
-              <span className='nav__link__element'>GitHub</span>
-            </a>
-          </li>
-          <li className='nav__item'>
-            <a className='nav__link' href='http://vercel.com/' target='_blank'>
-              <span className='nav__link__element'>Vercel</span>
-            </a>
-          </li>
-          <li className='nav__item'>
-            <a className='nav__link' href='https://dashboard.render.com/' target='_blank'>
-              <span className='nav__link__element'>Render</span>
-            </a>
-          </li>
+          {navbarData.map((nav) => <NavbarItem key={nav.title} {...nav} />)}
         </ul>
       </nav>
-      {/* Need it as space */}
+      {/* Need it as space on the right */}
       <div></div>
     </header>
   );
