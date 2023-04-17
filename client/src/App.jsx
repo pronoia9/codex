@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   // Once everythings fetched, check if the states have proper data, then cancel the loading screen
-  useEffect(() => { setLoading(!(tags && links && poem)); }, [tags, links, poem]);
+  useEffect(() => { setLoading(!(tags?.length && links?.length && poem?.length)); }, [tags, links, poem]);
 
   // TAGS
   async function fetchTags() {
